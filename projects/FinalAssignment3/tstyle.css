@@ -1,0 +1,44 @@
+footer.bottom {
+	font-size: 10px;
+	color: grey;
+    position: relative;
+    bottom:0;
+    height:60px;
+    width:100%;
+    clear:both;
+    display:block;
+    border-top: 1px solid #e4e4e4;
+}
+footer.bottom a {
+	font-size: 10px;
+	color: grey;
+	text-decoration: none;
+}
+
+footer.bottom a:hover
+{
+	color: black;
+}
+
+/*Styles for screen 600px and lower*/
+@media screen and (max-width: 600px) {
+	footer.botttom {
+		width: 100%;
+
+	}
+	
+/*Styles for screen 515px and lower*/
+@media only screen and (max-width : 480px) {
+	footer.bottom {
+		width: 100%;
+	}
+	
+
+/*Smartphone*/
+@media only screen and (max-width : 320px) {
+	footer.bottom {
+		width: 100%;
+
+	}
+}
+

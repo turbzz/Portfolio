@@ -1,0 +1,679 @@
+/* ------------ Choosing and defining our fonts, dynamic use my only saying font-family: menue;  ------------ */
+
+@font-face {
+    font-family: menue;
+    src: url(fonts/navfont.ttf);
+}
+
+@font-face {
+    font-family: divider_font;
+    src: url(fonts/phrasefont.ttf);
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* Basic Styles */
+body {
+	margin:0;
+	padding:0;
+	text-align:left;
+	text-decoration: none;
+    font-family: Verdana,arial,sans-serif;
+	color: black;
+}
+
+/* ------------ section settings ------------ */
+
+section {
+	width: 100%;
+    height: 100%;
+    height: auto !important;
+    position: relative;
+}
+
+/* ------------ class and styling of mobile menu ------------ */
+
+.accordion{
+  visibility: hidden;
+}
+
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------ apllying styles to different sections with specific IDs, also using z-index for layers ------------ */
+
+section#home {
+	background: white url('images/bg_home.jpg') no-repeat center top fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  z-index: 1;
+}
+
+section#news {
+	background-color: #55152D;
+    position: relative;
+    z-index: 6;
+}
+
+section#about_us {
+	background-color: #55152D;
+    position: relative;
+    z-index: 12;
+}
+
+section#gallery {
+	background-color: #55152D;
+    position: relative;
+    z-index: 18;
+}
+
+section#reservation {
+	background-color: #55152D;
+    position: relative;
+    z-index: 24;
+}
+
+section#find_us {
+	background-color: #55152D;
+    position: relative;
+    z-index: 30;
+}
+/* ------------ positioning and styling ------------ */
+
+#whereAmI {
+	position:relative;
+	margin-top: 3%;
+	left: -0.4%;
+  font-size: 6vw;
+  letter-spacing: 0.5vw;
+  padding: 0% 2% 0 3%;
+  line-height: 4.5vw;
+	color: white;
+	font-family: menue;
+	border-radius: 6px;
+}
+
+/* ------------ divider settings ------------ */
+
+.divider {
+	position:relative;
+	background-color:#EAEAEA;
+	color: rgb(230, 230, 230);
+	z-index: 999;
+	width: 100%;
+	text-align: right;
+}
+
+.divider span{
+	color: #94011B;
+	margin-right:25px;
+    font-size: 2.75vw;
+    line-height: 5vw;
+	font-style: italic;
+	font-family: divider_font;
+}
+
+/* ------------ nav styling for desktop nav------------ */
+
+nav#desktop  {
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: -25%;
+    position: absolute;
+}
+
+nav#desktop  ul {
+	list-style-type: none;
+}
+
+nav#desktop ul li {
+	padding: 1px;
+}
+
+nav#desktop ul li {
+	text-align:middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;	
+}
+
+nav#desktop ul li:hover, nav#desktop ul li:focus, nav#desktop ul li:active {
+   -webkit-transform: scale(1.3) !important;
+   -moz-transform: scale(1.3) !important;
+   -o-transform: scale(1.3) !important;
+   -ms-transform: scale(1.3) !important;
+   transform: scale(1.3) !important;
+}
+
+/* ------------ applying the font we defined in the first lines of css, vw end em ist used for resposivness, px would give so much hassle ------------ */
+nav#desktop ul li a{
+	font-family: menue;
+	color: white;
+	text-decoration: none;
+	font-size: 3.3vw;
+	letter-spacing: 0.050em;
+}
+/* ------------ hide the mobile nav on the desktop version ------------ */
+
+nav#mobile{
+	display: none;
+}
+
+/* ------------ logo position, also moz, o, webkit and ms used for cross-browser support ------------ */
+
+.logo {
+    display: block;
+	  width:100%;
+	  text-align:center;
+    margin: 0 auto;
+    padding: 10% 0 0;
+    -moz-transition: all 0.4s ease 0;
+    -o-transition: all 0.4s ease 0;
+    -webkit-transition: all 0.4s ease 0;
+    -ms-transition: all 0.4s ease 0;
+    transition: all 0.4s ease 0;
+	  opacity:0.9;
+}
+/* ------------ scaling ------------ */
+
+.logo img {
+	max-width: 25%;
+}
+
+/* ------------ already coded for website improvement, refer to presentation on january ------------ */
+
+div .languages {
+    position: absolute;
+    top: 5%;
+	left: 3%;
+	text-align:left;
+	/*left: 3%;
+    right: 3%;
+	text-align: right;	
+		This is for languages */
+    width: 100%;
+}
+
+div .languages img {
+	max-width: 5%;
+	height: auto;
+	margin-bottom: 50px;
+  z-index: 5;
+
+/* ------------ also positionin and cross-browser support for growing effect, creates dynamic ------------ */
+	
+	vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;	
+}
+
+div .languages img:hover, .languages img:focus, .languages img:active {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+div .social_media {
+	width:100%;
+	text-align: center;
+    margin: 0 auto;
+}
+
+div .social_media a{
+	padding: 0 20px 0 20px;
+}
+
+div .social_media img{
+	max-width: 3%;
+	height: auto;
+	margin-bottom: 100px;
+	
+	vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+div .social_media img:hover, .social_media img:focus, .social_media img:active {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/* About Us */
+
+.about_img {
+	width: 31.25%;
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 6% 10%;
+}
+
+.about_img img {
+	width: 100%;
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+	box-shadow:         0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------ styling the area for our p tags in our sections ------------ */
+.textarea {
+    width: 40%;
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 3% 2%;
+}
+
+/* ------------ styling the text itself ------------ */
+.textarea p {
+  color: #939393;
+  padding-top: 3%;
+  font-size: 1.2vw;
+  line-height: 2.4vw;
+}
+
+.textarea h3 {
+	color: #939393;
+}
+
+/* ------------ styling and setting up the JavaScrip slider ------------ */
+
+.gallery_slider {
+	margin-right:auto;
+	margin-left:auto;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-gallery {
+  width: 90%;
+  max-width: 1048px;
+  margin: 1.5em auto;
+  padding: 0;
+}
+.cd-gallery::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-gallery > li {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5em;
+  border-radius: .25em;
+}
+.cd-gallery > li > a {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-gallery {
+    margin: 2em auto;
+  }
+  .cd-gallery > li {
+    width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  .cd-gallery > li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+/* ------------ slider start ------------ */
+
+@media only screen and (min-width: 1048px) {
+  .cd-gallery {
+    margin: 2.5em auto;
+  }
+  .no-touch .cd-gallery > li:hover .cd-dots li.selected a {
+    /* Slider dots - change background-color of the selected dot when hover over the its parent list item */
+    background: #2f2933;
+    border-color: #2f2933;
+  }
+  .no-touch .cd-gallery > li:hover .cd-dots a {
+    /* Slider dots - change dot border-color when hover over the its parent list item */
+    border-color: #9688a0;
+  }
+  .no-touch .cd-gallery > li:hover li.move-right, .no-touch .cd-gallery > li:hover li.move-left {
+    /* show preview items when hover over the its parent list item */
+    opacity: 0.3;
+  }
+}
+
+.cd-item-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 5em 0;
+}
+
+
+
+.cd-item-wrapper li {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  -webkit-transform: translateX(200%) scale(0.7);
+  -moz-transform: translateX(200%) scale(0.7);
+  -ms-transform: translateX(200%) scale(0.7);
+  -o-transform: translateX(200%) scale(0.7);
+  transform: translateX(200%) scale(0.7);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.cd-item-wrapper li.selected {
+  /* selected item */
+  position: relative;
+  opacity: 1;
+  -webkit-transform: translateX(0) scale(1.3);
+  -moz-transform: translateX(0) scale(1.3);
+  -ms-transform: translateX(0) scale(1.3);
+  -o-transform: translateX(0) scale(1.3);
+  transform: translateX(0) scale(1.3);
+}
+.cd-item-wrapper li.move-left {
+  /* item on left - preview visible */
+  -webkit-transform: translateX(-100%) scale(0.7);
+  -moz-transform: translateX(-100%) scale(0.7);
+  -ms-transform: translateX(-100%) scale(0.7);
+  -o-transform: translateX(-100%) scale(0.7);
+  transform: translateX(-100%) scale(0.7);
+  opacity: 0.3;
+}
+.cd-item-wrapper li.move-right {
+  /* item on right - preview visible */
+  -webkit-transform: translateX(100%) scale(0.7);
+  -moz-transform: translateX(100%) scale(0.7);
+  -ms-transform: translateX(100%) scale(0.7);
+  -o-transform: translateX(100%) scale(0.7);
+  transform: translateX(100%) scale(0.7);
+  opacity: 0.3;
+}
+.cd-item-wrapper li.hide-left {
+  /* items hidden on the left */
+  -webkit-transform: translateX(-200%) scale(0.7);
+  -moz-transform: translateX(-200%) scale(0.7);
+  -ms-transform: translateX(-200%) scale(0.7);
+  -o-transform: translateX(-200%) scale(0.7);
+  transform: translateX(-200%) scale(0.7);
+}
+.cd-item-wrapper li img {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 1048px) {
+  .cd-item-wrapper li.move-left,
+  .cd-item-wrapper li.move-right {
+    /* hide preview items */
+    opacity: 0.3;
+  }
+  .cd-item-wrapper li.focus-on-left {
+    /* class added to the .selected and .move-right items when user hovers over the .move-left item (item preview on the left) */
+    -webkit-transform: translateX(3%) scale(1.25);
+    -moz-transform: translateX(3%) scale(1.25);
+    -ms-transform: translateX(3%) scale(1.25);
+    -o-transform: translateX(3%) scale(1.25);
+    transform: translateX(3%) scale(1.25);
+  }
+  .cd-item-wrapper li.focus-on-left.move-right {
+    -webkit-transform: translateX(103%) scale(0.7);
+    -moz-transform: translateX(103%) scale(0.7);
+    -ms-transform: translateX(103%) scale(0.7);
+    -o-transform: translateX(103%) scale(0.7);
+    transform: translateX(103%) scale(0.7);
+  }
+  .cd-item-wrapper li.focus-on-right {
+    /* class added to the .selected and .move-left items when user hovers over the .move-right item (item preview on the right) */
+    -webkit-transform: translateX(-3%) scale(1.25);
+    -moz-transform: translateX(-3%) scale(1.25);
+    -ms-transform: translateX(-3%) scale(1.25);
+    -o-transform: translateX(-3%) scale(1.25);
+    transform: translateX(-3%) scale(1.25);
+  }
+  .cd-item-wrapper li.focus-on-right.move-left {
+    -webkit-transform: translateX(-103%) scale(0.7);
+    -moz-transform: translateX(-103%) scale(0.7);
+    -ms-transform: translateX(-103%) scale(0.7);
+    -o-transform: translateX(-103%) scale(0.7);
+    transform: translateX(-103%) scale(0.7);
+  }
+  .cd-item-wrapper li.hover {
+    /* class added to the preview items (.move-left or .move-right) when user hovers over them */
+    opacity: 1 !important;
+  }
+  .cd-item-wrapper li.hover.move-left {
+    -webkit-transform: translateX(-97%) scale(0.75);
+    -moz-transform: translateX(-97%) scale(0.75);
+    -ms-transform: translateX(-97%) scale(0.75);
+    -o-transform: translateX(-97%) scale(0.75);
+    transform: translateX(-97%) scale(0.75);
+  }
+  .cd-item-wrapper li.hover.move-right {
+    -webkit-transform: translateX(97%) scale(0.75);
+    -moz-transform: translateX(97%) scale(0.75);
+    -ms-transform: translateX(97%) scale(0.75);
+    -o-transform: translateX(97%) scale(0.75);
+    transform: translateX(97%) scale(0.75);
+  }
+}
+
+.cd-dots {
+  /* not visible in the html document - created using jQuery */
+  position:relative;
+  right:-35%;
+}
+.cd-dots::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-dots li {
+  display: inline-block;
+  padding: 0 2%;
+  pointer-events: none;
+}
+.cd-dots li.selected a {
+  background: #2f2933;
+  border-color: #2f2933;
+}
+.cd-dots a {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 3px solid #9688a0;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.2s, background-color 0.2s;
+  -moz-transition: border-color 0.2s, background-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+@media only screen and (min-width: 1048px) {
+  .cd-dots li {
+    pointer-events: auto;
+  }
+  .cd-dots li.selected a {
+    background: #cccccc;
+    border-color: #cccccc;
+  }
+  .cd-dots a {
+    height: 20px;
+    width: 20px;
+    border-color: #cccccc;
+    /* fix a bug in IE9/10 - transparent anchor not clickable */
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.no-js .move-right,
+.no-js .move-left {
+  display: none;
+}
+
+/* ------------ SLIDER ENDS ------------ */
+
+/* RESERVATION */
+
+.res_bg{
+	width:100%;
+	text-align:center;
+	padding: 5% 0;
+}
+
+.res_bg img{
+	max-width:40%;
+	width:100%;
+}
+
+/* FIND US */
+
+.find_area_l {
+	width: 31.25%;
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 5% 10%;
+	color:#B7B7B7;
+	text-align:center;
+}
+
+.find_area_r {
+    width: 40%;
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 3% 2%;
+}
+
+/* Back to Top Button */
+
+#back-top {
+	position: fixed;
+	bottom: 10px;
+	width: 10%;
+	z-index: 99999;
+}
+#back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+	margin: auto;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+	width: 108px;
+	height: 108px;
+	display: block;
+	margin-bottom: 7px;
+	background-image: url(images/icons/scroll_up.png);
+	background-repeat: no-repeat;
+	background-size: 108px 108px;
+	opacity: 0.3;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	opacity: 0.5;
+}
+
+/* ------------ footer styling ------------ */
+
+footer {
+	position:relative;
+	bottom:0px;
+	margin-bottom: 10px;
+	width:100%;
+	text-align: center;
+	background-color: #EAEAEA;
+	color: grey;
+	padding: 1% 0 1% 0;
+}
+
+
+/*Styles for screen 600px and lower*/
+@media screen and (max-width: 800px) {
+	
+	body {
+		width: 100%;
+		font-size: 0.8em;
+	}
+	nav {
+		width: 100%;
+		font-size: 1.8em;
+	}
+	
+}

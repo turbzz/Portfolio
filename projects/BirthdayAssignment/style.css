@@ -1,0 +1,192 @@
+/* Defining the font, u can define different once, i only use one. */ 
+
+@font-face {
+    font-family: Main;
+    font-weight: 100;
+    src: url(fonts/CaviarDreams.ttf);
+}
+
+/* backround for our site */ 
+
+
+html { 
+background: #F0F8FF;
+}
+
+/* position */ 
+
+body {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Notice: reference to the font i defined as 'Main' ; */ 
+
+
+h1 { 
+ font-family: Main;
+ font-size: 34px;
+ margin-top: 5px;
+ margin-bottom: 10px;
+ }
+
+/* font and color of paragraphs and anchors */ 
+
+
+a {
+	font-family: Main;
+	font-size: 28px;
+	color: #707070;
+}
+
+/* fieldset adjustments (widht and position) */ 
+
+fieldset {
+width: 500px;
+margin: 0 auto;
+clear: both;
+text-align: left;
+}
+
+/* font size of legend */ 
+
+legend {
+font-size: 25px;
+text-align: center;
+}
+
+/* position */ 
+
+label.field {
+text-align: left;
+width: 300px;
+font-weight: bold;
+margin: auto;
+}
+
+/* box size*/ 
+
+input.tbox {
+width: 270px;
+padding: 50px;
+float: right;
+clear: both;
+}
+
+/* position calendar */ 
+
+#textbox1 {
+clear: both;
+font-family: Main;
+font-size: 20px;
+}
+
+
+input label[type="radio"]{
+    float:right;
+}
+
+/* styling paragraphs in the fieldset */ 
+
+fieldset p {
+clear: both;
+font-family: Main;
+font-size: 24px;
+color: #707070;
+}
+
+/* styling the end result */ 
+
+p.totalend {
+font-family: Main;
+font-size: 28px;
+color: #707070;
+padding-left: 15px;
+}
+
+
+/* adjusting my icons :) */ 
+
+#fb {
+    position:relative;
+    bottom:-90px;
+    height: auto;
+    width: 3%;
+  }
+
+
+#tw {
+    position:relative;
+    bottom:-90px;
+    height: auto;
+    width: 3%;    
+    }
+
+#insta {
+    position:relative;
+    bottom:-90px;
+    height: auto;
+    width: 3%;    
+    }
+
+
+
+
+/* my little effect, when u klick into the box, border turns blue */ 
+
+input[type=text] {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.style-5 input[type="text"]:focus,
+.style-5 input[type="text"].focus {
+  box-shadow: inset 2px 2px 4px 0 #c9c9c9;
+}
+
+
+
+
+
+
+
+
+
+/* submit button styling, working in every browser */ 
+
+button.button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #999999;
+  padding: 10px 20px;
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #ffffff 50%,
+    #d6d6d6);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from(#ffffff),
+    color-stop(0.50, #ffffff),
+    to(#d6d6d6));
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px solid #abd1ff;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 3px rgba(255,255,255,1);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 3px rgba(255,255,255,1);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 3px rgba(255,255,255,1);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.1),
+    0px 1px 0px rgba(255,255,255,1);
+}
